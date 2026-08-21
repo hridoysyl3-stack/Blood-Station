@@ -502,72 +502,282 @@
         </div>
 
         <!-- ================= PAGE 5: SUPPORT & FAQ ================= -->
-        <div id="support" class="page flex-grow w-full">
-            <header class="bg-white border-b relative overflow-hidden py-10">
-                <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red-500 to-red-800"></div>
-                <div class="max-w-7xl mx-auto px-4 text-center">
-                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">Help Center & <span class="text-red-600">FAQ</span></h2>
-                    <p class="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">Got a question or facing an issue? We're here to help.</p>
-                </div>
-            </header>
-            <div class="max-w-7xl mx-auto px-4 py-10 grid grid-cols-1 lg:grid-cols-12 gap-10">
-                <div class="lg:col-span-5 space-y-6">
-                    <div class="bg-gradient-to-br from-red-600 to-red-800 rounded-2xl p-6 text-white shadow-lg relative overflow-hidden">
-                        <div class="absolute -right-4 -top-4 opacity-20 text-8xl"><i class="fas fa-phone-volume"></i></div>
-                        <div class="relative z-10">
-                            <div class="flex items-center gap-2 mb-2"><span class="relative flex h-3 w-3"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span><span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span></span><h3 class="font-bold text-red-100 uppercase tracking-widest text-xs">Emergency Hotline</h3></div>
-                            <p class="text-4xl font-black mb-1 tracking-wider">01989823605</p>
-                            <p class="text-xs text-red-200 mt-2 font-medium bg-black/20 p-2 rounded border border-red-500/50"><i class="fas fa-exclamation-triangle text-yellow-300"></i> Call only for extreme life-threatening medical emergencies.</p>
-                        </div>
-                    </div>
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-envelope-open-text text-indigo-600 mr-2"></i> Report an Issue</h3>
-                        <form onsubmit="event.preventDefault(); showToast('Message sent! Our admins will look into it.');" class="space-y-4 mt-4">
-                            <div><label class="block text-xs font-bold text-gray-700 mb-1">Your Name / MIST ID</label><input type="text" class="w-full border p-2.5 rounded-lg bg-gray-50 text-sm" required></div>
-                            <div>
-                                <label class="block text-xs font-bold text-gray-700 mb-1">Topic</label>
-                                <select class="w-full border p-2.5 rounded-lg bg-gray-50 text-sm" required>
-                                    <option value="">Select...</option><option>Report a Bug</option><option>Report Fake Request</option><option>Partnership</option><option>Other</option>
-                                </select>
-                            </div>
-                            <div><label class="block text-xs font-bold text-gray-700 mb-1">Message</label><textarea rows="4" class="w-full border p-2.5 rounded-lg bg-gray-50 text-sm" required></textarea></div>
-                            <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-bold hover:bg-indigo-700 shadow-md">Send Message <i class="fas fa-paper-plane ml-1"></i></button>
-                        </form>
-                    </div>
-                    <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 text-center">
-                        <h4 class="font-bold text-blue-900 mb-3">Other Ways to Connect</h4>
-                        <div class="flex flex-col gap-3">
-                            <a href="mailto:support@mistblood.com" class="bg-white text-blue-700 font-semibold py-2 rounded-lg border border-blue-200 hover:bg-blue-100 text-sm"><i class="fas fa-envelope mr-2"></i> support@mistblood.com</a>
-                            <a href="https://www.facebook.com/atomizeclassroom" target="_blank" class="bg-[#1877F2] text-white font-semibold py-2 rounded-lg hover:bg-blue-800 shadow-sm text-sm"><i class="fab fa-facebook mr-2"></i> Message Atomize Classroom</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-7">
-                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-8">
-                        <h3 class="text-2xl font-bold text-gray-900 mb-6"><i class="fas fa-question-circle text-red-500 mr-2"></i> Frequently Asked Questions</h3>
-                        
-                        <h4 class="font-bold text-gray-500 uppercase tracking-widest text-xs mb-3 mt-4 border-b pb-2">Registration & Security</h4>
-                        <div class="space-y-3">
-                            <div class="border border-gray-200 rounded-xl overflow-hidden"><button onclick="toggleFAQ('faq1', 'icon1')" class="w-full text-left p-4 font-bold text-gray-800 bg-gray-50 flex justify-between"><span>Who can join MIST Blood Connect?</span><i id="icon1" class="fas fa-chevron-down text-red-500 transition-transform"></i></button><div id="faq1" class="faq-answer px-4 pb-4 pt-2 text-sm text-gray-600">This platform is exclusively for current students, faculty, staff, and verified alumni of MIST. You need a valid MIST ID card.</div></div>
-                            <div class="border border-gray-200 rounded-xl overflow-hidden"><button onclick="toggleFAQ('faq2', 'icon2')" class="w-full text-left p-4 font-bold text-gray-800 bg-gray-50 flex justify-between"><span>Is my phone number visible to everyone?</span><i id="icon2" class="fas fa-chevron-down text-red-500 transition-transform"></i></button><div id="faq2" class="faq-answer px-4 pb-4 pt-2 text-sm text-gray-600"><strong>No!</strong> Phone numbers are hidden by default. Only when a verified donor actively accepts your request, contact info is exchanged.</div></div>
-                            <div class="border border-gray-200 rounded-xl overflow-hidden"><button onclick="toggleFAQ('faq3', 'icon3')" class="w-full text-left p-4 font-bold text-gray-800 bg-gray-50 flex justify-between"><span>Why do I need Admin Approval to change details?</span><i id="icon3" class="fas fa-chevron-down text-red-500 transition-transform"></i></button><div id="faq3" class="faq-answer px-4 pb-4 pt-2 text-sm text-gray-600">To maintain a 100% genuine database. Verifying vital changes prevents fake accounts.</div></div>
-                        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support & FAQ | MIST Blood Connect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        .faq-answer { display: none; }
+        .faq-answer.open { display: block; animation: slideDown 0.3s ease-in-out; }
+        .rotate-180 { transform: rotate(180deg); }
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans text-gray-800 flex flex-col min-h-screen">
 
-                        <h4 class="font-bold text-gray-500 uppercase tracking-widest text-xs mb-3 mt-8 border-b pb-2">Features & Services</h4>
-                        <div class="space-y-3">
-                            <div class="border border-gray-200 rounded-xl overflow-hidden"><button onclick="toggleFAQ('faq4', 'icon4')" class="w-full text-left p-4 font-bold text-gray-800 bg-gray-50 flex justify-between"><span>What is the "Zero-Cost Transport Fund"?</span><i id="icon4" class="fas fa-chevron-down text-red-500 transition-transform"></i></button><div id="faq4" class="faq-answer px-4 pb-4 pt-2 text-sm text-gray-600">This community-funded initiative covers the ride cost for donors who need to travel to the hospital but might be short on cash.</div></div>
-                            <div class="border border-gray-200 rounded-xl overflow-hidden"><button onclick="toggleFAQ('faq5', 'icon5')" class="w-full text-left p-4 font-bold text-gray-800 bg-gray-50 flex justify-between"><span>How does the "Exam Mode" work?</span><i id="icon5" class="fas fa-chevron-down text-red-500 transition-transform"></i></button><div id="faq5" class="faq-answer px-4 pb-4 pt-2 text-sm text-gray-600">If you have exams, turn on "Exam Mode". You will be temporarily hidden from the donor search list.</div></div>
-                        </div>
-
-                        <h4 class="font-bold text-gray-500 uppercase tracking-widest text-xs mb-3 mt-8 border-b pb-2">Health & Guidelines</h4>
-                        <div class="space-y-3">
-                            <div class="border border-gray-200 rounded-xl overflow-hidden"><button onclick="toggleFAQ('faq7', 'icon7')" class="w-full text-left p-4 font-bold text-gray-800 bg-gray-50 flex justify-between"><span>How often can I donate blood?</span><i id="icon7" class="fas fa-chevron-down text-red-500 transition-transform"></i></button><div id="faq7" class="faq-answer px-4 pb-4 pt-2 text-sm text-gray-600">For whole blood, male donors can donate every 90 days, and female donors every 120 days. Platelets can be donated every 15-30 days.</div></div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Navigation Bar -->
+    <nav class="bg-red-700 text-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center gap-3">
+            <div class="flex items-center gap-2">
+                <i class="fas fa-droplet text-2xl"></i>
+                <h1 class="text-xl font-bold tracking-wide">MIST Blood Connect</h1>
+            </div>
+            <div class="flex items-center gap-4 text-sm md:text-base flex-wrap justify-center">
+                <a href="#" class="hover:text-red-200 font-semibold transition"><i class="fas fa-home mr-1"></i> Home</a>
+                <span class="text-red-400">|</span>
+                <a href="#" class="hover:text-red-200 font-semibold transition"><i class="fas fa-user mr-1"></i> Profile</a>
             </div>
         </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-white border-b relative overflow-hidden py-10">
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-red-500 to-red-800"></div>
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-3">
+                Help Center & <span class="text-red-600">FAQ</span>
+            </h2>
+            <p class="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
+                Got a question or facing an issue? We're here to help. Check our frequently asked questions or reach out directly to the MIST Blood Connect team.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-10 flex-grow w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            
+            <!-- LEFT COLUMN: Contact & Support -->
+            <div class="lg:col-span-5 space-y-6">
+                
+                <!-- Emergency Hotline Card -->
+                <div class="bg-gradient-to-br from-red-600 to-red-800 rounded-2xl p-6 text-white shadow-lg relative overflow-hidden transform hover:scale-[1.02] transition duration-300">
+                    <div class="absolute -right-4 -top-4 opacity-20 text-8xl"><i class="fas fa-phone-volume"></i></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-2 mb-2">
+                            <span class="relative flex h-3 w-3">
+                              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                              <span class="relative inline-flex rounded-full h-3 w-3 bg-white"></span>
+                            </span>
+                            <h3 class="font-bold text-red-100 uppercase tracking-widest text-xs">Emergency Hotline</h3>
+                        </div>
+                        <p class="text-4xl font-black mb-1 tracking-wider">01989823605</p>
+                        <p class="text-xs text-red-200 mt-2 font-medium bg-black/20 p-2 rounded border border-red-500/50">
+                            <i class="fas fa-exclamation-triangle mr-1 text-yellow-300"></i> Please call only for extreme life-threatening medical emergencies. We are volunteers, not a hospital.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1"><i class="fas fa-envelope-open-text text-indigo-600 mr-2"></i> Report an Issue</h3>
+                    <p class="text-xs text-gray-500 mb-5">Spotted a fake request? Having trouble uploading your ID? Let us know.</p>
+                    
+                    <form onsubmit="event.preventDefault(); showToast('Message sent! Our admins will look into it.');" class="space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Your Name / MIST ID</label>
+                            <input type="text" placeholder="e.g. Akib Ahmed (202614001)" class="w-full border p-2.5 rounded-lg bg-gray-50 text-sm outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" required>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Topic</label>
+                            <select class="w-full border p-2.5 rounded-lg bg-gray-50 text-sm outline-none focus:border-indigo-500" required>
+                                <option value="">Select a topic...</option>
+                                <option value="bug">Report a Bug / Technical Issue</option>
+                                <option value="spam">Report Fake Request / Spam</option>
+                                <option value="partnership">Partnership / Blood Drive Hosting</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 mb-1">Message</label>
+                            <textarea rows="4" placeholder="Describe your issue or inquiry here..." class="w-full border p-2.5 rounded-lg bg-gray-50 text-sm outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500" required></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg font-bold hover:bg-indigo-700 transition shadow-md">
+                            Send Message <i class="fas fa-paper-plane ml-1"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Direct Links -->
+                <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 text-center">
+                    <h4 class="font-bold text-blue-900 mb-3">Other Ways to Connect</h4>
+                    <div class="flex flex-col gap-3">
+                        <a href="mailto:support@mistblood.com" class="bg-white text-blue-700 font-semibold py-2 rounded-lg border border-blue-200 hover:bg-blue-100 transition text-sm">
+                            <i class="fas fa-envelope mr-2"></i> support@mistblood.com
+                        </a>
+                        <a href="https://www.facebook.com/atomizeclassroom" target="_blank" class="bg-[#1877F2] text-white font-semibold py-2 rounded-lg hover:bg-blue-800 transition shadow-sm text-sm">
+                            <i class="fab fa-facebook mr-2"></i> Message Atomize Classroom
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN: FAQ Accordion -->
+            <div class="lg:col-span-7">
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center gap-2">
+                        <i class="fas fa-question-circle text-red-500"></i> Frequently Asked Questions
+                    </h3>
+
+                    <!-- Category: Registration & Security -->
+                    <h4 class="font-bold text-gray-500 uppercase tracking-widest text-xs mb-3 mt-4 border-b pb-2">Registration & Security</h4>
+                    <div class="space-y-3">
+                        <!-- FAQ Item -->
+                        <div class="border border-gray-200 rounded-xl overflow-hidden hover:border-red-300 transition">
+                            <button onclick="toggleFAQ('faq1', 'icon1')" class="w-full text-left p-4 font-bold text-gray-800 bg-gray-50 hover:bg-red-50 flex justify-between items-center focus:outline-none transition">
+                                <span>Who can join MIST Blood Connect?</span>
+                                <i id="icon1" class="fas fa-chevron-down text-red-500 transition-transform duration-300"></i>
+                            </button>
+                            <div id="faq1" class="faq-answer px-4 pb-4 pt-2 text-sm text-gray-600 bg-white">
+                                This platform is exclusively for current students, faculty, staff, and verified alumni of MIST. You need a valid MIST ID card to complete registration.
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item -->
+                        <div class="border border-gray-200 rounded-xl overflow-hidden hover:border-red-300 transition">
+                            <button onclick="toggleFAQ('faq2', 'icon2')" class="w-full text-left p-4 font-bold text-gray-800 bg-gray-50 hover:bg-red-50 flex justify-between items-center focus:outline-none transition">
+                                <span>Is my phone number visible to everyone?</span>
+                                <i id="icon2" class="fas fa-chevron-down text-red-500 transition-transform duration-300"></i>
+                            </button>
+                            <div id="faq2" class="faq-answer px-4 pb-4 pt-2 text-sm text-gray-600 bg-white">
+                                <strong>Absolutely not!</strong> Your privacy is our top priority. Phone numbers are hidden by default. Only when a verified donor actively accepts your blood request, contact information is securely exchanged.
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item -->
+                        <div class="border border-gray-200 rounded-xl overflow-hidden hover:border-red-300 transition">
+                            <button onclick="toggleFAQ('faq3', 'icon3')" class="w-full text-left p-4 font-bold text-gray-800 bg-gray-50 hover:bg-red-50 flex justify-between items-center focus:outline-none transition">
+                                <span>Why do I need Admin Approval to change my phone number?</span>
+                                <i id="icon3" class="fas fa-chevron-down text-red-500 transition-transform duration-300"></i>
+                            </button>
+                            <div id="faq3" class="faq-answer px-4 pb-4 pt-2 text-sm text-gray-600 bg-white">
+                                To maintain a 100% genuine and secure database. Verifying vital changes prevents fake accounts and keeps our community safe from scammers.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: Features & Services -->
+                    <h4 class="font-bold text-gray-500 uppercase tracking-widest text-xs mb-3 mt-8 border-b pb-2">Features & Services</h4>
+                    <div class="space-y-3">
+                        <!-- FAQ Item -->
+                        <div class="border border-gray-200 rounded-xl overflow-hidden hover:border-red-300 transition">
+                            <button onclick="toggleFAQ('faq4', 'icon4')" class="w-full text-left p-4 font-bold text-gray-800 bg-gray-50 hover:bg-red-50 flex justify-between items-center focus:outline-none transition">
+                                <span>What is the "Zero-Cost Transport Fund"?</span>
+                                <i id="icon4" class="fas fa-chevron-down text-red-500 transition-transform duration-300"></i>
+                            </button>
+                            <div id="faq4" class="faq-answer px-4 pb-4 pt-2 text-sm text-gray-600 bg-white">
+                                We believe money should never be a barrier to saving a life. This community-funded initiative covers the ride/transportation cost for donors who need to travel to the hospital but might be short on cash at the end of the month.
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item -->
+                        <div class="border border-gray-200 rounded-xl overflow-hidden hover:border-red-300 transition">
+                            <button onclick="toggleFAQ('faq5', 'icon5')" class="w-full text-left p-4 font-bold text-gray-800 bg-gray-50 hover:bg-red-50 flex justify-between items-center focus:outline-none transition">
+                                <span>How does the "Exam Mode" (Academic Pause) work?</span>
+                                <i id="icon5" class="fas fa-chevron-down text-red-500 transition-transform duration-300"></i>
+                            </button>
+                            <div id="faq5" class="faq-answer px-4 pb-4 pt-2 text-sm text-gray-600 bg-white">
+                                We know MIST academics can be highly demanding. If you have mid-terms or heavy assignments, simply turn on "Exam Mode" in your profile. You will be temporarily hidden from the donor search list so you don't receive emergency calls during exams.
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item -->
+                        <div class="border border-gray-200 rounded-xl overflow-hidden hover:border-red-300 transition">
+                            <button onclick="toggleFAQ('faq6', 'icon6')" class="w-full text-left p-4 font-bold text-gray-800 bg-gray-50 hover:bg-red-50 flex justify-between items-center focus:outline-none transition">
+                                <span>What is the "Platelet (Apheresis) Hub"?</span>
+                                <i id="icon6" class="fas fa-chevron-down text-red-500 transition-transform duration-300"></i>
+                            </button>
+                            <div id="faq6" class="faq-answer px-4 pb-4 pt-2 text-sm text-gray-600 bg-white">
+                                While whole blood can be donated every 4 months, Platelets can be donated every 15-30 days via an Apheresis machine (crucial for Dengue patients). You can opt-in during registration to join our special emergency response team.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Category: Health & Donation Guidelines -->
+                    <h4 class="font-bold text-gray-500 uppercase tracking-widest text-xs mb-3 mt-8 border-b pb-2">Health & Guidelines</h4>
+                    <div class="space-y-3">
+                        <!-- FAQ Item -->
+                        <div class="border border-gray-200 rounded-xl overflow-hidden hover:border-red-300 transition">
+                            <button onclick="toggleFAQ('faq7', 'icon7')" class="w-full text-left p-4 font-bold text-gray-800 bg-gray-50 hover:bg-red-50 flex justify-between items-center focus:outline-none transition">
+                                <span>How often can I donate blood?</span>
+                                <i id="icon7" class="fas fa-chevron-down text-red-500 transition-transform duration-300"></i>
+                            </button>
+                            <div id="faq7" class="faq-answer px-4 pb-4 pt-2 text-sm text-gray-600 bg-white">
+                                For whole blood, male donors can safely donate every 3 months (90 days), and female donors every 4 months (120 days). Our system automatically calculates this and shows your countdown timer in your profile!
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item -->
+                        <div class="border border-gray-200 rounded-xl overflow-hidden hover:border-red-300 transition">
+                            <button onclick="toggleFAQ('faq8', 'icon8')" class="w-full text-left p-4 font-bold text-gray-800 bg-gray-50 hover:bg-red-50 flex justify-between items-center focus:outline-none transition">
+                                <span>I have a cold/fever. Can I donate?</span>
+                                <i id="icon8" class="fas fa-chevron-down text-red-500 transition-transform duration-300"></i>
+                            </button>
+                            <div id="faq8" class="faq-answer px-4 pb-4 pt-2 text-sm text-gray-600 bg-white">
+                                <strong>No.</strong> If you have a fever, cough, or are taking antibiotics, please rest. You can turn on the "Sick/Unwell" toggle in your profile to pause notifications until you fully recover.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-10 mt-auto border-t-4 border-red-600">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold mb-3">Join Our Community</h3>
+            <p class="text-gray-400 text-sm mb-6 max-w-lg mx-auto">Stay connected with MIST Blood Connect. Follow our page for updates.</p>
+            <p class="text-gray-600 text-xs mt-8">&copy; 2026 MIST Blood Connect.</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="hidden fixed bottom-5 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white px-6 py-3 rounded-full shadow-2xl flex items-center gap-3 z-[200]">
+        <i class="fas fa-check-circle text-green-400"></i>
+        <span id="toastMsg" class="font-medium">Success!</span>
     </div>
+
+    <!-- Accordion Script -->
+    <script>
+        function toggleFAQ(answerId, iconId) {
+            const answer = document.getElementById(answerId);
+            const icon = document.getElementById(iconId);
+            
+            // Toggle open class
+            if (answer.classList.contains('open')) {
+                answer.classList.remove('open');
+                icon.classList.remove('rotate-180');
+            } else {
+                // Optional: Close all other FAQs first
+                document.querySelectorAll('.faq-answer').forEach(el => el.classList.remove('open'));
+                document.querySelectorAll('.fa-chevron-down').forEach(el => el.classList.remove('rotate-180'));
+                
+                answer.classList.add('open');
+                icon.classList.add('rotate-180');
+            }
+        }
+
+        function showToast(msg) {
+            const t = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = msg;
+            t.classList.remove('hidden');
+            setTimeout(() => t.classList.add('hidden'), 3500);
+        }
+    </script>
+</body>
+</html>
 
     <!-- Global Footer -->
     <footer class="bg-gray-900 text-white py-10 border-t-4 border-red-600 mt-auto">
